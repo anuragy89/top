@@ -1,0 +1,49 @@
+{
+  "name": "🎮 XO Gaming Bot",
+  "description": "Advanced Telegram XO (Tic-Tac-Toe) Gaming Bot with AI, Leaderboard & MongoDB",
+  "keywords": [
+    "telegram",
+    "bot",
+    "gaming",
+    "tic-tac-toe",
+    "xo",
+    "ai",
+    "leaderboard",
+    "mongodb",
+    "python"
+  ],
+  "repository": "https://github.com/yourusername/xo-gaming-bot",
+  "logo": "https://images.emojiterra.com/twitter/v13.1/512px/1f3ae.png",
+  "success_url": "/",
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "value": "",
+      "required": true
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB Atlas Connection String (mongodb+srv://user:pass@cluster...)",
+      "value": "",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram User ID (owner of the bot)",
+      "value": "",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-2x"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "echo 'Bot deployed successfully! Start messaging your bot on Telegram.'"
+  }
+}
